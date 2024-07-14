@@ -1,12 +1,96 @@
-.bi{
-    color: #ffffff;
-    font-size: 20px;
-    transition: color 0.5s ease;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #7b3132ff;
+    --color-secundario: #000000;
+    --color-base: #ffffff;
+    --color-body: #cecece;
 }
-.bi:hover{
-    color: rgb(155, 42, 42);
-    transform: scale(1.5);
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
 }
-.navbar-collapse{
-    width: 100% !important;
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: #e7e7e7;
+}
+/* ------ ESTILOS PAGINA INICIO ---- */
+/*--- HEADER ---*/
+header{     
+    position: relative;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+}
+header div{
+    background-color: white;
+    padding: 10px 0;
+}
+header div h1{
+    color: rgba(0,0,0,0.80);;
+    text-align: center;
+    font-size: 40px;
+}
+header div img{
+    position: absolute;
+    display: inline-block;
+    width: 122px;
+    height: 120px;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    border-radius: 15px 0 15px 0;
+    box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.75);
+}
+header nav{   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: 76px;
+    background-color: rgba(0,0,0,0.70);;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-bottom: 0;    
+}
+header nav ul li a{
+    position: relative;
+    display: inline-block;
+    
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1em; 
+    margin: 5px 20px;
+    padding: 5px;
+}
+header nav ul li a::after{  
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #9b0f0f;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease
+}
+header nav ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+/* SECCION DEL BANNER */
+.banner{
+    margin-top: -80px;
 }

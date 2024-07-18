@@ -12,18 +12,18 @@
     <title>Inicio</title>
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Casa de la cultura Jorge Eliécer Gaitán</h1>
-            <img src="./img/identidadSitio/logo.png" alt="logo de la página">
+    <header class="container__header">
+        <div class="header__top">
+            <h1 class="title">Casa de la cultura Jorge Eliécer Gaitán</h1>
+            <img class="img" src="./img/identidadSitio/logo.png" alt="logo de la página">
         </div>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/casaCultura.html">Casa de la cultura</a></li>
-                <li><a href="./pages/agendaCultural.html">Agenda cultural</a></li>
-                <li><a href="./pages/biblioteca.html">Biblioteca</a></li>
-                <li><a href="./pages/ubicacion.html">Ubicación</a></li>
+        <nav class="header__bottom">
+            <ul class="nav__list">
+                <li class="list"><a class="list__link" href="./index.html">Inicio</a></li>
+                <li class="list"><a class="list__link" href="./pages/casaCultura.html">Casa de la cultura</a></li>
+                <li class="list"><a class="list__link" href="./pages/agendaCultural.html">Agenda cultural</a></li>
+                <li class="list"><a class="list__link" href="./pages/biblioteca.html">Biblioteca</a></li>
+                <li class="list"><a class="list__link" href="./pages/ubicacion.html">Ubicación</a></li>
             </ul>
         </nav>
     </header>
@@ -32,13 +32,13 @@
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
+                    <img src="./img/bannerSlider/Banner1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
                     <img src="./img/bannerSlider/Banner2.png" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
                     <img src="./img/bannerSlider/Banner3.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
                   </div>
                 </div>      
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -50,10 +50,85 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-          </section>  
+          </section> 
+          <section class="workpaces">
+            <div class="workpaces__encabezado"> 
+              <h2 class="encabezado__titulo">Ven <br>y Conoce</h2>
+              <p class="encabezado__parrafo">Nuestros espacios de trabajo</p>
+              <button type="button" class="btn btn-outline-dark">Nuestra Historia</button>
+            </div>
+            <div class="gallery">
+              <div class="gallery__workspace1">
+                <img  class="img1" src="./img/workspace/workspace1.jpg" alt="">
+              </div>
+              <div class="gallery__workspace2">
+                <img class="img2" src="/img/workspace/workspace2.jpg" alt="">
+              </div>
+              <div class="gallery__workspace3">
+                <img class="img3" src="/img/workspace/workspace3.jpg" alt="">
+              </div>
+              <div class="gallery__workspace4">
+                <img class="img4" src="/img/workspace/workspace4.jpg" alt="">
+              </div>
+              <div class="gallery__workspace5">
+                <img class="img5" src="/img/workspace/workspace5.jpg" alt="">
+              </div>
+              <div class="gallery__workspace6">
+                <img class="img6" src="/img/workspace/workspace6.png" alt="">
+              </div>
+              <div class="gallery__workspace7">
+                <img class="img7" src="/img/workspace/workspace7.jpg" alt="">
+              </div>
+            </div>
+          </section>
+          <section class="agendaCultural">
+            <div class="agendaCultura__header">
+                <p class="header__parrafo">Nuestra Agenda</p>
+                <h2 class="header__titulo">Cultural</h2>
+                <button type="button" class="btn btn-outline-dark">Ver más</button>
+            </div>
+            <article class="articulo">
+                <div class="articulo__contenedorImg">
+                    <img  class="articulo__img" src="./img/noticias/noticia1.jpg" alt="">
+                </div>
+                <div class="articulo__noticia">
+                    <div class="noticia__contenedorHeader">
+                        <span class="contenedorHeader__fecha">14 febrero 2024</span>
+                        <span class="contenedorHeader__clasificacion">Evento</span>
+                        <span class="contenedorHeader__categoria">Musica</span>
+                    </div>
+                    <div class="noticia__contenedorBody">
+                        <h2 class="contenedorBody__titulo">Alma rusa en la musica clasica y jazz para todos.</h2>
+                        <div class="contenedorBody__contenido">
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non minima eligendi culpa. Amet dolorem incidunt non unde exercitationem, nihil ipsam temporibus tenetur pariatur esse asperiores rerum sint, labore fugiat!...</p>
+                          <button type="button" class="btn btn-outline-success">Success</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="articulo">
+              <div class="articulo__contenedorImg">
+                  <img  class="articulo__img" src="./img/noticias/noticia1.jpg" alt="">
+              </div>
+              <div class="articulo__noticia">
+                  <div class="noticia__contenedorHeader">
+                      <span class="contenedorHeader__fecha">14 febrero 2024</span>
+                      <span class="contenedorHeader__clasificacion">Evento</span>
+                      <span class="contenedorHeader__categoria">Musica</span>
+                  </div>
+                  <div class="noticia__contenedorBody">
+                      <h2 class="contenedorBody__titulo">Alma rusa en la musica clasica y jazz para todos.</h2>
+                      <div class="contenedorBody__contenido">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non minima eligendi culpa. Amet dolorem incidunt non unde exercitationem, nihil ipsam temporibus tenetur pariatur esse asperiores rerum sint, labore fugiat!...</p>
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                      </div>
+                  </div>
+              </div>
+          </article>
+        </section>
     </main>
     
-    <a href="#" class="enlace">Pasa el ratón por aquí</a>
+    
     <!-- Scripts de bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

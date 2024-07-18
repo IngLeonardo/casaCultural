@@ -157,7 +157,7 @@ body{
 }
 .gallery img{
     width: 100%;
-    height: 250px;
+    height: 280px;
 }
 .img6{   
     object-fit: contain;
@@ -190,7 +190,7 @@ body{
     margin: 60px 0;
 
     display: grid;
-    grid-template-rows: 170px repeat(2,1fr);
+    grid-template-rows: 170px repeat(1,1fr);
     grid-template-columns: 1fr;
     grid-template-areas: 
     "header"
@@ -214,6 +214,11 @@ body{
 .header__titulo{    
     font-size: 50px;
 }
+.contendor_articulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .articulo{
     display: grid;
     grid-template-rows: 10% 30% 60%;
@@ -224,7 +229,7 @@ body{
     "imgNoticia noticia";
 
     padding: 20px 25px;
-    margin: 20px 20px;
+    margin: 20px 15px;
     background-color: var(--color-sombra);
     
 }
@@ -290,7 +295,78 @@ body{
     margin: 0 10px;
     grid-area: noticia;
 }
+/* -------------------------------------- */
+/* SECCION BIBLIOTECA */
+.biblioteca{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 758px;
+    grid-template-areas: 
+    "header gallery";
 
+}
+.biblioteca__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #171717;
+    color: var(--color-base);
+    
+    grid-area: header;
+}
+.heder__parrafo{
+    margin-bottom: 0;
+}
+.header__titulo{
+    margin-bottom: 0;
+}
+.biblioteca__gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    grid-area: gallery;
+}
+.biblioteca__gallery img{
+    width: 49.5%;
+    height: 250px;
+}
+
+
+/* .biblioteca__header{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+    margin: 10px 0 10px 50px;
+}
+.heder__parrafo{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.header__titulo{
+    font-size: 60px;
+    margin-bottom: 0;
+}
+.header__button{
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 20px;
+    margin-bottom: 5px;
+}
+main .biblioteca figure{
+    width: 100%;
+    background-color: #000;
+}
+main .biblioteca figure img{
+    display: inline-block;
+    width: 231px;
+    height: 180px;
+}
+ */
 
 
 

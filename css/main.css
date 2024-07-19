@@ -221,15 +221,16 @@ body{
 }
 .articulo{
     display: grid;
-    grid-template-rows: 10% 30% 60%;
+    grid-template-rows: 20% 20% 60%;
     grid-template-columns: 40% 60%;
     grid-template-areas: 
     "imgNoticia fecha"
     "imgNoticia titular"
     "imgNoticia noticia";
 
-    padding: 20px 25px;
+    padding: 20px;
     margin: 20px 15px;
+    height: 460px;
     background-color: var(--color-sombra);
     
 }
@@ -243,11 +244,12 @@ body{
     grid-area: imgNoticia;
 }
 .articulo__img{
-    width: 80%;
+    width: 100%;
     object-fit: cover;
 }
 .noticia__contenedorHeader{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: start;
     align-items: center;
@@ -257,11 +259,12 @@ body{
 }
 .contenedorHeader__fecha{
     height: 36px;
-    text-align:center;
+    text-align:left;
     line-height: 36px;
     padding: 5px;
-    font-size: 13px;
+    font-size: 12px;
     color: var(--color-desenfoque);
+    flex-basis: 100px;
 }
 .contenedorHeader__clasificacion,
 .contenedorHeader__categoria{
@@ -297,12 +300,12 @@ body{
 }
 /* -------------------------------------- */
 /* SECCION BIBLIOTECA */
-.biblioteca{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 758px;
-    grid-template-areas: 
-    "header gallery";
+    .biblioteca{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 758px;
+        grid-template-areas: 
+        "header gallery";
 
 }
 .biblioteca__header{
@@ -329,44 +332,84 @@ body{
 
     grid-area: gallery;
 }
+.biblioteca__gallery{
+    margin: 0;
+}
 .biblioteca__gallery img{
     width: 49.5%;
     height: 250px;
 }
 
+/* ---------------------------------- */
+/* SECCION DE CONTACTANOS */
+.contactanos{
+    width: 100%;
+    height: 300px;
 
-/* .biblioteca__header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "horario contacto";
+}
+.contactanos__horarios{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    padding: 10px;
-    margin: 10px 0 10px 50px;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-base);
+    background-color: var(--color-primario);
+    
+    grid-area: horario;
 }
-.heder__parrafo{
-    font-size: 30px;
-    margin-bottom: 0;
+.horario__texto{
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
 }
-.header__titulo{
-    font-size: 60px;
-    margin-bottom: 0;
+.contactanos__contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-sombra);
+    
+    grid-area: contacto;
 }
-.header__button{
-    font-size: 20px;
-    background-color: #000;
-    color: #fff;
-    padding: 5px 20px;
-    margin-bottom: 5px;
-}
-main .biblioteca figure{
+/* ---------------------------------- */
+/* SECCION UBICACION */
+.ubicacion iframe {
     width: 100%;
-    background-color: #000;
+    height: 500px;
 }
-main .biblioteca figure img{
+
+/* --------------------------------------- */
+/* FOOTER */
+footer{
+    text-align: center;
+}
+.footer__top{
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    background-color: var(--color-sombra);
+}
+.top__img{
+    display: inline;
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+.container__bottom span{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color-primario);
     display: inline-block;
-    width: 231px;
-    height: 180px;
+    color: var(--color-base);
 }
- */
+
 
 
 
@@ -378,7 +421,16 @@ main .biblioteca figure img{
 /* ------------------------------- */
 /* ---MEDIA QUERY--- */
 
-@media(max-width: 1050px) {
+@media(max-width: 1140px){
+    .contenedorBody__titulo{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .contenedorHeader__fecha{
+        flex-basis: 400px;
+    }
+}
+@media(max-width:1050px) {
     .title{
         font-size: 36px;
         vertical-align:middle;
@@ -390,6 +442,13 @@ main .biblioteca figure img{
         top: 28px;
         left: 20px;
     }
+    .articulo{
+        height: 500px;
+    }
+    .articulo__img{
+        width: 160px;
+        height: 160px;
+    }
 }
 @media(max-width: 980px){
     .title{
@@ -398,6 +457,25 @@ main .biblioteca figure img{
     .img{
         width: 92px;
         height: 90px;
+    }
+    .articulo{
+        height: 420px;
+    }
+    .articulo__img{
+        width: 320px;
+        height: 320px;
+    }
+    .contenedorBody__titulo{
+        font-size: 26px;
+        margin-bottom: 0px;
+    }
+    .contenedorHeader__fecha{
+        flex-basis: 150px;
+    }
+    .contendor_articulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 @media(max-width: 900px){
@@ -424,6 +502,9 @@ main .biblioteca figure img{
         "workspace5 workspace5 workspace7";
         padding: 0 80px;
     }
+    .articulo{
+        gap: 10px;
+    }
 }
 @media(max-width: 800px){
     .title{
@@ -448,7 +529,33 @@ main .biblioteca figure img{
     .gallery{
         padding: 0 40px;
     }
-}
+    .contenedorBody__titulo{
+        margin: 0;
+        padding: 0px 40px;
+    }
+    .articulo__img{
+        width: 270px;
+        height: 270px;
+    }
+    .contenedorBody__contenido p{
+        margin: 0;
+        padding: 0px 30px;
+    }
+    .contenedorBody__contenido button{
+        margin-left: 30px;
+    }
+    .biblioteca{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 600px;
+        grid-template-areas: 
+        "header gallery";
+    }
+    .biblioteca__gallery img{
+        width: 48%;
+        height: 196px;
+    }
+} 
 @media(max-width: 700px){
     .title{
         padding: 0 20px;
@@ -472,7 +579,42 @@ main .biblioteca figure img{
     .gallery{
         padding: 0 20px;
     }
-   
+    .articulo__img{
+        width: 220px;
+        height: 220px;
+    }
+    .biblioteca__gallery{
+        
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .biblioteca__gallery img{
+        width: 100%;
+    }
+    .gallery__img4{
+        display: none;
+    }
+    .gallery__img5{
+        display: none;
+    }
+    .gallery__img6{
+        display: none;
+    }
+    .horario__titulo{
+        padding: 5px 15px;
+    }
+    .horario__texto{
+        padding: 5px 15px;
+        font-size: 15px;
+    }
+    .contacto__titulo{
+        padding: 10px;
+    }
+    .contacto__info{
+        text-align: center;
+        margin: 10px;
+    }
+    
 }
 @media(max-width: 600px){
     .container__header{
@@ -519,6 +661,46 @@ main .biblioteca figure img{
         "workspace5 workspace4 workspace7";
         padding: 0 10px;
     }
+    .articulo{
+        height: 510px;
+    }
+    .contenedorHeader__fecha{
+        flex-basis: 300px;
+        gap: 5px;
+        
+    }
+    .contenedorBody__titulo{
+        padding: 0px 10px;
+        margin-bottom: 25px;
+    }
+    .contenedorBody__contenido p{
+        margin: 0;
+        padding: 0px 10px;
+    }
+    .contenedorBody__contenido button{
+        margin-left: 10px;
+    }
+    .articulo__img{
+        width: 180px;
+        height: 180px;
+    }
+    .biblioteca{
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px;
+        grid-template-areas: 
+        "header" 
+        "gallery";
+    }
+    .contactanos{
+        grid-template-columns: 100%;
+        grid-template-rows: 300px;
+        grid-template-areas: 
+        "horario" 
+        "contacto";
+    }
+    .contactanos__contacto{
+        height: 300px;
+    }
     
 }
 @media(max-width: 510px){
@@ -552,6 +734,30 @@ main .biblioteca figure img{
     .gallery__workspace7{
         display: none;      
     }
+    .contenedorBody__contenido p{
+        padding: 15px;
+    }
+    .contenedorBody__contenido button{
+        margin-left: 10px;
+    }
+    .articulo__img{
+        display: none;
+    }
+    .articulo{
+        display: grid;
+        grid-template-rows: 20% 20% 60%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "fecha"
+        "titular"
+        "noticia";
+    
+        padding: 20px;
+        margin: 20px 15px;
+        height: 500px;
+        background-color: var(--color-sombra);
+        
+    }
 }
 @media(max-width: 400px){
     .gallery{
@@ -565,5 +771,8 @@ main .biblioteca figure img{
         "workspace5" 
         "workspace4";
         gap: 0px;
+    }
+    .articulo{
+        height: 530px;
     }
 }

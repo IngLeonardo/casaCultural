@@ -462,7 +462,88 @@ footer{
     
 }
 
+/* ------ ESTILOS PAGINA AGENDA CULTURAL ---- */
 
+.agendaCultural__header--page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    color: var(--color-secundario);
+    height: 200px;
+    padding: 12px;
+    margin: 20px 10px;
+}
+.header__parrafo--page{
+    font-size: 25px;
+    margin-bottom: 0;
+}
+.header__titulo--page{
+    font-size: 75px;
+}
+
+.contendor_articulo--page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    margin: 30px 100px;
+    max-width: 1200px;
+    
+}
+.articulo--page{
+    background-color: var(--color-sombra);
+}
+.articulo__contenedorImg--page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    
+}
+.articulo__img--page{
+    width: 40%;
+    padding: 10px;
+    margin: 30px;
+}
+.noticia__contenedorHeader--page{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+
+    margin: 5px 20px 30px 20px;
+}
+.contenedorHeader__fecha--page{
+    display: inline-block;
+    font-size: 14px;
+    color: var(--color-desenfoque);
+    width: 120px;
+    margin-left: 5px;
+}
+.contenedorHeader__clasificacion--page,
+.contenedorHeader__categoria--page{
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--color-base);
+    background-color: var(--color-primario);
+    
+}
+.noticia__contenedorBody--page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    min-height: 100px;
+
+    margin: 20px;
+    
+}
 
 
 
@@ -531,6 +612,9 @@ footer{
         flex-direction: column;
         justify-content: center;
     }
+    .articulo__img--page{
+        width: 90%;
+    }
 }
 @media(max-width: 900px){
     .title{
@@ -559,6 +643,7 @@ footer{
     .articulo{
         gap: 10px;
     }
+    
 }
 @media(max-width: 800px){
     .title{
@@ -609,6 +694,11 @@ footer{
         width: 48%;
         height: 196px;
     }
+    .agendaCultural__header--page{
+        justify-content: center;
+        align-items: center ;
+    }
+    
 } 
 @media(max-width: 700px){
     .title{
@@ -667,6 +757,14 @@ footer{
     .contacto__info{
         text-align: center;
         margin: 10px;
+    }
+    .contendor_articulo--page{
+        margin: 30px 80px;   
+    }
+    .articulo__img--page{
+        padding: 0px;
+        margin: 14px 0;
+        width: 100%;
     }
     
 }
@@ -756,6 +854,16 @@ footer{
     .contactanos__contacto{
         height: 300px;
     }
+    .contendor_articulo--page{
+        margin: 30px 20px;   
+    }
+    .noticia__contenedorHeader--page{
+        justify-content: center;
+        margin: 10px 5px 20px 5px;
+    }
+    .agendaCultural__header--page {
+        margin: 10px 10px;
+
     
 }
 @media(max-width: 510px){
@@ -819,6 +927,13 @@ footer{
         background-color: var(--color-sombra);
         
     }
+    .header__parrafo--page{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .header__titulo--page{
+        font-size: 50px;
+    }
 }
 @media(max-width: 400px){
     .gallery{
@@ -835,5 +950,8 @@ footer{
     }
     .articulo{
         height: 530px;
+    }
+    .contendor_articulo--page{
+        margin: 30px 0px;   
     }
 }

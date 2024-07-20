@@ -3,81 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Integración del Favicon -->
     <link rel="icon" href="../img/identidadSitio/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Estilos de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Estilos de los iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <title>Agenda cultural</title>
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Casa de la cultura Jorge Eliécer Gaitán</h1>
-            <img src="../img/identidadSitio/logo.png" alt="logo de la página">
+    <header class="container__header">
+        <div class="header__top">
+            <h1 class="title">Casa de la cultura Jorge Eliécer Gaitán</h1>
+            <a href="../index.html">
+                <img class="img" src="../img/identidadSitio/logo.png" alt="logo de la página">
+            </a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">inicio</a></li>
-                <span class="separador"></span>
-                <li><a href="./casaCultura.html">Casa de la cultura</a></li>
-                <span class="separador"></span>
-                <li><a href="./agendaCultural.html">Agenda cultural</a></li>
-                <span class="separador"></span>
-                <li><a href="./biblioteca.html">Biblioteca</a></li>
-                <span class="separador"></span>
-                <li><a href="./ubicacion.html">Ubicación</a></li>
+        <nav class="header__bottom_pages">
+            <ul class="nav__list">
+                <li class="list"><a class="list__link" href="../index.html">Inicio</a></li>
+                <li class="list"><a class="list__link" href="./pages/casaCultura.html">Casa de la cultura</a></li>
+                <li class="list"><a class="list__link" href="./pages/agendaCultural.html">Agenda cultural</a></li>
+                <li class="list"><a class="list__link" href="./pages/biblioteca.html">Biblioteca</a></li>
+                <li class="list"><a class="list__link" href="./pages/ubicacion.html">Ubicación</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="agendaCultural">
-            <article>
-                <div class="imgNoticia">
-                    <img src="../img/noticias/noticia1.jpg" alt="">
-                </div>
-                <div class="cuerpoNoticia">
-                    <div>
-                        <span class="fechaPublicacion">14 febrero 2024</span>
-                        <span class="tipoEvento">Evento</span>
-                        <span class="categoriaEvento">Musica</span>
+        <section class="agendaCultural--page">
+            <div class="agendaCultural__header--page">
+                <p class="header__parrafo--page">Nuestra Agenda</p>
+                <h2 class="header__titulo--page">Cultural</h2>
+            </div>
+            <div class="contendor_articulo--page">
+                <article class="articulo--page">
+                    <div class="articulo__contenedorImg--page">
+                        <img  class="articulo__img--page" src="../img/noticias/noticia1.jpg" alt="">
                     </div>
-                    <h2>Alma rusa en la musica clasica y jazz para todos</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non minima eligendi culpa. Amet dolorem incidunt non unde exercitationem, nihil ipsam temporibus tenetur pariatur esse asperiores rerum sint, labore fugiat!</p>
+                    <div class="articulo__noticia--page">
+                        <div class="noticia__contenedorHeader--page">
+                            <span class="contenedorHeader__fecha--page">14 febrero 2024</span>
+                            <span class="contenedorHeader__clasificacion--page">Evento</span>
+                            <span class="contenedorHeader__categoria--page">Musica</span>
+                        </div>
+                        <div class="noticia__contenedorBody--page">
+                            <h2 class="contenedorBody__titulo--page">Alma rusa en la musica clasica y jazz para todos.</h2>
+                            <div class="contenedorBody__contenido--page">
+                            <p class="contenido__texto--page">Estas son algunas de las actividades que se estarán desarrollando en el marco del Primer Festival de Arte de Verano aquí en la Casa de la Cultura...</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="articulo--page">
+                <div class="articulo__contenedorImg--page">
+                    <img  class="articulo__img--page" src="../img/noticias/noticia1.jpg" alt="">
+                </div>
+                <div class="articulo__noticia--page">
+                    <div class="noticia__contenedorHeader--page">
+                        <span class="contenedorHeader__fecha--page">14 febrero 2024</span>
+                        <span class="contenedorHeader__clasificacion--page">Evento</span>
+                        <span class="contenedorHeader__categoria--page">Musica</span>
+                    </div>
+                    <div class="noticia__contenedorBody--page">
+                        <h2 class="contenedorBody__titulo--page">Alma rusa en la musica clasica y jazz para todos.</h2>
+                        <div class="contenedorBody__contenido--page">
+                            <p class="contenido__texto--page">¿Te sientes un llanero de verdad? ✍ Únete a nuestra convocatoria de curso dedicada al emblemático instrumento cuatro llanero, descubre la esencia del llanero a través de sus acordes, demuestra el amor por este instrumento hasta el 13 de marzo de 2024...</p>
+                        </div>
+                    </div>
                 </div>
             </article>
-            <article>
-                <div class="imgNoticia">
-                    <img src="../img/noticias/noticia2.jpg" alt="">
-                </div>
-                <div class="cuerpoNoticia">
-                    <div>
-                        <span class="fechaPublicacion">14 febrero 2024</span>
-                        <span class="tipoEvento">Evento</span>
-                        <span class="categoriaEvento">Musica</span>
-                    </div>
-                    <h2>Alma rusa en la musica clasica y jazz para todos</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non minima eligendi culpa. Amet dolorem incidunt non unde exercitationem, nihil ipsam temporibus tenetur pariatur esse asperiores rerum sint, labore fugiat!</p>
-                </div>
-            </article>
-            <article>
-                <div class="imgNoticia">
-                    <img src="../img/noticias/noticia2.jpg" alt="">
-                </div>
-                <div class="cuerpoNoticia">
-                    <div>
-                        <span class="fechaPublicacion">14 febrero 2024</span>
-                        <span class="tipoEvento">Evento</span>
-                        <span class="categoriaEvento">Musica</span>
-                    </div>
-                    <h2>Alma rusa en la musica clasica y jazz para todos</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non minima eligendi culpa. Amet dolorem incidunt non unde exercitationem, nihil ipsam temporibus tenetur pariatur esse asperiores rerum sint, labore fugiat!</p>
-                </div>
-            </article>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="superior">
-            <img src="../img/identidadSitio/logo_transparente.png" alt="logo empresarial">
+        <div class="footer__top">
+            <img class="top__img" src="../img/identidadSitio/logo_transparente.png" alt="logo empresarial">
         </div>
-        <div class="inferior">
+        <div class="container__bottom">
             <span>Copyright © 2024 - developed by Leonardo Silva</span>
         </div>
     </footer>

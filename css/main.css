@@ -17,7 +17,6 @@
 }
 body{
     font-family: "Montserrat", sans-serif !important;
-    background-color: var(--color-body);
 }
 /* ------ ESTILOS PAGINA INICIO ---- */
 /*--- HEADER ---*/
@@ -72,6 +71,18 @@ body{
     align-items: center;
     height: 76px;
     background-color: rgba(0,0,0,0.0);
+
+    grid-area: bottom;
+}
+.header__bottom_pages{   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: 76px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 28px 10px rgba(0,0,0,0.53);
 
     grid-area: bottom;
 }
@@ -275,6 +286,10 @@ body{
     padding: 5px;
     
 }
+
+.noticia__contenedorBody{
+    max-width: 400px;
+}
 .contenedorBody__titulo{
     display: flex;
     flex-direction: column;
@@ -298,6 +313,7 @@ body{
     margin: 0 10px;
     grid-area: noticia;
 }
+
 /* -------------------------------------- */
 /* SECCION BIBLIOTECA */
     .biblioteca{
@@ -395,7 +411,7 @@ footer{
     background-color: var(--color-sombra);
 }
 .top__img{
-    display: inline;
+    display: inline-block;
     width: 200px;
     height: 250px;
     padding: 20px;
@@ -409,6 +425,44 @@ footer{
     display: inline-block;
     color: var(--color-base);
 }
+/* --------------------------------------------------- */
+
+/* ------ ESTILOS PAGINA CASA DE LA CULTURA ---- */
+
+.history__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    height: 350px;
+    margin-top: 20px;
+    padding: 10px;
+    
+}
+.header__span{
+    font-size: 20px;
+    color: #9b0f0f;
+    font-weight: 500;
+}
+.header__text{
+    font-size: 30px;
+}
+.header__title{
+    font-size: 60px;
+}
+.history__body{
+    width: 80%;
+    margin: 0px auto;
+}
+.body__text{
+    text-align: left;
+    line-height: 25px;
+    padding: 10px;
+    
+}
+
+
 
 
 
@@ -643,6 +697,7 @@ footer{
         height: 80px;
         justify-content: space-around;
     }
+ 
     .nav__list{
         flex-direction: row;
         flex-wrap: wrap;
@@ -715,6 +770,12 @@ footer{
     .header__bottom{
         background-color: var(--color-secundario);
         height: 240px;
+        justify-content: space-around;
+    }
+    .header__bottom_pages{   
+        background-color: rgb(0, 0, 0);
+        box-shadow: -4px 7px 5px -2px rgba(0,0,0,0.53);
+        height: 250px;
         justify-content: space-around;
     }
     .nav__list{

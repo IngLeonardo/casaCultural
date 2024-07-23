@@ -437,8 +437,8 @@ footer{
     align-items: start;
 
     height: 350px;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 30px;
+    padding: 20px;
     
 }
 .header__span{
@@ -507,9 +507,60 @@ footer{
     
 }
 
+/* ------ ESTILOS PAGINA BIBLIOTECA ---- */
+.container__book{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 
+    margin: 40px auto;
+    
+}
 
+.book__article{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 
+    repeat(auto-fill, minmax(150px, 1fr));
+    /* repeat(2,1fr); */
+    
+    grid-template-areas: 
+        "portada" 
+        "description";
 
+    max-width: 80%;
+    margin-bottom: 30px;
+}
+.article__portadaLibro{
+    grid-area: portada;
+}
+.article__description{
+    grid-area: description;
+}
+.description__header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.header__fecha{
+    max-width: 150px;
+    padding: 4px;
+    color: var(--color-desenfoque);
+    font-size: 14px;
+}
+.header__tag{
+    
+    padding: 4px;
+    color: var(--color-base);
+    font-size: 14px;
+    background-color: var(--color-primario);
+}
 
 
 
@@ -792,7 +843,6 @@ footer{
     .contendor_articulo--page{
         margin: 30px 0px;   
     }
-  
 
 }
 @media(max-width: 510px){
@@ -882,5 +932,14 @@ footer{
     }
     .contendor_articulo--page{
         margin: 0px 0px;   
+    }
+    .header__tag{
+    
+        padding: 4px;
+        color: var(--color-base);
+        font-size: 14px;
+        background-color: var(--color-primario);
+        
+        
     }
 }

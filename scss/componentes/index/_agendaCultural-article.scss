@@ -1,0 +1,90 @@
+.contendor_articulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .articulo{
+        display: grid;
+        grid-template-rows: 20% 20% 60%;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "imgNoticia fecha"
+        "imgNoticia titular"
+        "imgNoticia noticia";
+        
+        padding: 20px;
+        margin: 20px 15px;
+        height: 460px;
+        background-color: var(--color-sombra);
+
+        .articulo__contenedorImg{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            grid-area: imgNoticia;
+
+            .articulo__img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .articulo__noticia{
+            .noticia__contenedorHeader{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                gap: 10px;
+                
+                grid-area: fecha;
+
+                .contenedorHeader__fecha{
+                    height: 36px;
+                    text-align:left;
+                    line-height: 36px;
+                    padding: 5px;
+                    font-size: 12px;
+                    color: var(--color-desenfoque);
+                    flex-basis: 100px;
+                }
+                .contenedorHeader__clasificacion,
+                .contenedorHeader__categoria{
+                    width: 80px;
+                    text-align:center;
+                    background-color: var(--color-primario);
+                    color:var(--color-base);
+                    padding: 5px;
+                }
+            }
+            .noticia__contenedorBody{
+                max-width: 400px;
+                .contenedorBody__titulo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    
+                    width: 100%;
+                    height: 110px;
+                    margin: 0 10px;
+                    font-size: 25px;
+                    margin-bottom: 0;
+                    grid-area: titular;
+                }
+                .contenedorBody__contenido{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    
+                    height: 215px;
+                    margin: 0 10px;
+                    grid-area: noticia;
+                }
+            }
+        }
+    }
+}

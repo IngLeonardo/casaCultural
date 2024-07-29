@@ -335,7 +335,7 @@ body{
     
     grid-area: header;
 }
-.heder__parrafo{
+.header__parrafo{
     margin-bottom: 0;
 }
 .header__titulo{
@@ -649,9 +649,6 @@ footer{
         width: 92px;
         height: 90px;
     }
-    .articulo{
-        height: 420px;
-    }
     .articulo__img{
         width: 320px;
         height: 320px;
@@ -693,6 +690,7 @@ footer{
     }
     
 }
+
 @media(max-width: 800px){
     .title{
         padding: 0 20px;
@@ -702,10 +700,6 @@ footer{
         width: 88px;
         height: 86px;
         left: 10px;
-    }
-    .nav__list{
-        gap: 5px;
-        
     }
     .list__link{
         margin: 5px 5px; 
@@ -724,7 +718,7 @@ footer{
         width: 270px;
         height: 270px;
     }
-    .contenedorBody__contenido p{
+    .contenido__p{
         margin: 0;
         padding: 0px 30px;
     }
@@ -742,9 +736,16 @@ footer{
         width: 48%;
         height: 196px;
     }
-
     
-} 
+}
+
+
+
+
+
+
+/* -------- */
+
 @media(max-width: 700px){
     .title{
         padding: 0 20px;
@@ -803,7 +804,14 @@ footer{
         text-align: center;
         margin: 10px;
     }
-    .container__contact {
+
+
+
+
+
+
+    /* --- PAGINA FALTA-- */
+    .container__contact{
         flex-direction: column;
         width: 100%;
     }
@@ -812,6 +820,14 @@ footer{
     }
     
 }
+
+
+
+
+
+
+
+
 @media(max-width: 600px){
     .container__header{
         grid-template-rows: 80px 80px;
@@ -897,16 +913,27 @@ footer{
     .contactanos__contacto{
         height: 300px;
     }
+
+
+
+
+
+    /* PAGINA FALTA */
     .contendor_articulo--page{
         margin: 30px 0px;   
     }
     
-
 }
+
+
+
+
 @media(max-width: 510px){
     .container__header{
         grid-template-rows: 80px 240px;
     }
+
+
     .title{
         padding-left: 40px;
         font-size: 18px;
@@ -917,12 +944,18 @@ footer{
         height: 240px;
         justify-content: space-around;
     }
+
+
+    /* PAGINAS FALTA */
     .header__bottom_pages{   
         background-color: rgb(0, 0, 0);
         box-shadow: -4px 7px 5px -2px rgba(0,0,0,0.53);
         height: 250px;
         justify-content: space-around;
     }
+
+
+
     .nav__list{
         flex-direction: column;
         align-items: center;        
@@ -964,6 +997,8 @@ footer{
         background-color: var(--color-sombra);
         
     }
+
+    /* PAGINA FALTA */
     .header__parrafo--page{
         font-size: 20px;
         margin-bottom: 0;
@@ -972,6 +1007,9 @@ footer{
         font-size: 50px;
     }
 }
+
+
+
 @media(max-width: 400px){
     .gallery{
         grid-template-rows: repeat(6,1fr);
@@ -988,6 +1026,8 @@ footer{
     .articulo{
         height: 530px;
     }
+
+    /* PAGINA FALTA */
     .contendor_articulo--page{
         margin: 0px 0px;   
     }

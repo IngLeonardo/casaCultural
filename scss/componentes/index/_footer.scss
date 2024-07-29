@@ -1,0 +1,27 @@
+footer{
+    text-align: center;
+    
+
+    .footer__top{
+        width: 100%;
+        height: 300px;
+        line-height: 300px;
+        background-color: var(--color-sombra);
+
+        .top__img{
+            display: inline-block;
+            width: 200px;
+            height: 250px;
+            padding: 20px;
+            margin: 0 auto;
+            vertical-align: middle;
+        }
+    }
+    .container__bottom span{
+        width: 100%;
+        padding: 20px;
+        background-color: var(--color-primario);
+        display: inline-block;
+        color: var(--color-base);
+    }
+}

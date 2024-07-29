@@ -1,0 +1,70 @@
+.contactanos{
+    width: 100%;
+    height: 300px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "horario contacto";
+
+    @include Tablet-m{
+        grid-template-columns: 100%;
+        grid-template-rows: 300px;
+        grid-template-areas: 
+        "horario" 
+        "contacto";
+    }
+
+    .contactanos__horarios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-base);
+        background-color: var(--color-primario);
+        
+        grid-area: horario;
+
+        .horario__titulo{
+            @include Tablet-l{
+                padding: 5px 15px;
+            }
+        }
+        .horario__texto{
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+
+            @include Tablet-l{
+                padding: 5px 15px;
+                font-size: 15px;
+            }
+        }
+    }
+    .contactanos__contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-sombra);
+        
+        grid-area: contacto;
+        
+        @include Tablet-m{
+            height: 300px;
+        }
+
+        .contacto__titulo{
+            @include Tablet-l{
+                padding: 10px;
+            }
+        }
+        .contacto__info{
+            @include Tablet-l{
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    }
+}

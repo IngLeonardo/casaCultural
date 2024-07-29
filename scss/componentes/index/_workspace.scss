@@ -1,0 +1,122 @@
+.workpaces{
+
+    .workpaces__encabezado{
+        width: 100%;
+        height: 300px;
+        padding: 1em;
+        margin: 60px 0 10px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .encabezado__titulo{
+            font-size: 50px;
+            text-align: center;
+
+            @include Desktop-m{
+                font-size: 45px;
+            }
+            @include Desktop-s{
+                font-size: 40px;
+            }
+            @include Tablet-l{
+                font-size: 35px;
+            }
+        }
+
+        .encabezado__parrafo{
+            font-size: 20px;
+        }
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+        "workspace6 workspace2 workspace2"
+        "workspace1 workspace3 workspace4"
+        "workspace5 workspace5 workspace7";
+        gap: 4px;
+        background-color: #ffffff;
+        padding: 0 150px;
+        
+        @include Desktop-m{
+            grid-template-areas: 
+            "workspace6 workspace6 workspace2"
+            "workspace1 workspace3 workspace4"
+            "workspace5 workspace5 workspace7";
+            padding: 0 80px;
+        }
+        @include Desktop-s{
+            padding: 0 40px;
+        }
+        @include Tablet-l{
+            padding: 0 20px;
+        }
+        @include Tablet-m{
+            grid-template-areas: 
+            "workspace6 workspace6 workspace6"
+            "workspace1 workspace3 workspace2"
+            "workspace5 workspace4 workspace7";
+            padding: 0 10px;
+        }
+        @include Tablet-s{
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas: 
+            "workspace6 workspace6 workspace6"
+            "workspace1 workspace3 workspace2"
+            "workspace5 workspace5 workspace4";
+            gap: 4px;
+            padding: 0 0px;
+        }
+        @include Mobile{
+            grid-template-rows: repeat(6,1fr);
+            grid-template-columns: repeat(1,1fr);
+            grid-template-areas: 
+            "workspace6"
+            "workspace1"
+            "workspace3" 
+            "workspace2"
+            "workspace5" 
+            "workspace4";
+            gap: 0px;
+        }
+
+        img{
+            width: 100%;
+            height: 280px;
+        }
+
+        .gallery__workspace1{
+            grid-area: workspace1;
+        }
+        .gallery__workspace2{
+            grid-area: workspace2;
+        }
+        .gallery__workspace3{
+            grid-area: workspace3;
+        }
+        .gallery__workspace4{
+            grid-area: workspace4;
+        }
+        .gallery__workspace5{
+            grid-area: workspace5;
+        }
+        .gallery__workspace6{
+            grid-area: workspace6;
+        }
+        .gallery__workspace7{
+            grid-area: workspace7;
+            
+            @include Tablet-s{
+                display: none;
+            }
+        }
+    }
+}   
+
+
+

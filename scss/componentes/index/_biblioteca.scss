@@ -1,0 +1,77 @@
+.biblioteca{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 758px;
+    grid-template-areas: 
+    "header gallery";
+
+    @include Desktop-s{
+        grid-template-rows: 600px;
+        grid-template-areas: 
+        "header gallery";
+    }
+    @include Tablet-m{
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px;
+        grid-template-areas: 
+        "header" 
+        "gallery";
+    }
+
+    .biblioteca__header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #171717;
+        color: var(--color-base);
+        
+        grid-area: header;
+        
+        .header__parrafo{
+            margin-bottom: 0;
+        }
+        .header__titulo{
+            margin-bottom: 0;
+        }
+    }
+
+    .biblioteca__gallery{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+        
+        grid-area: gallery;
+
+        @include Tablet-l{
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        & img{
+            width: 49.5%;
+            height: 250px;
+
+            @include Desktop-s{
+                width: 48%;
+                height: 196px;
+            }
+            @include Tablet-l{
+                width: 100%;
+            }
+            
+        }
+        .gallery__img4
+        .gallery__img5
+        .gallery__img6{
+            @include Tablet-l{
+                display: none;
+            }
+        }
+        
+    }
+}
+
+
+

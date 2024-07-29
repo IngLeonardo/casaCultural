@@ -1,6 +1,9 @@
 @import "./base/generales";
+@import "./base/madiaQuery";
 @import "./componentes/index/header";
-@import "./componentes/index/workpace-header";
-@import "./componentes/index/workspace-gallery";
-@import "./componentes/index/agendaCultural-header";
-@import "./componentes/index/agendaCultural-article";
+@import "./componentes/index/workspace";
+@import "./componentes/index/agendaCultural";
+@import "./componentes/index/biblioteca";
+@import "./componentes/index/contactanos";
+@import "./componentes/index/ubicacion";
+@import "./componentes/index/footer";

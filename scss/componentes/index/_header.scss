@@ -10,6 +10,10 @@
     top: 0;
     z-index: 3;
     width: 100%;
+
+    @include Tablet-s{
+        grid-template-rows: 80px 240px;
+    }
 }
 .container__header{
     .header__top{
@@ -19,16 +23,55 @@
         position: relative;
 
         display: flex;
-        flex-direction: row     ;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
 
         grid-area: top;
-        
+
+        @include Tablet-m{
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 1fr;
+        }
+        @include Tablet-m{
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         .title{
             color: var(--color-secundario);
             font-size: 40px;
             margin-bottom: 0;
+
+            @include Desktop-xl{
+                font-size: 36px;
+                vertical-align:middle;
+            }
+            @include Desktop-l{
+                font-size: 32px;
+            }
+            @include Desktop-m{
+                font-size: 28px;
+            }
+            @include Desktop-s{
+                padding: 0 20px;
+                font-size: 25px;
+            }
+            @include Tablet-l{
+                padding: 0 20px;
+                font-size: 20px;
+            }
+            @include Tablet-m{
+                padding-left: 40px;
+                font-size: 18px;
+                flex-basis: 70%;
+                text-align: center;
+            }
+            @include Tablet-s{
+                padding-left: 40px;
+                font-size: 18px;
+                flex-basis: 80%;
+            }
         }
 
         .img{
@@ -41,6 +84,36 @@
             z-index: 2;
             border-radius: 15px 0 15px 0;
             box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.75);
+            
+            @include Desktop-xl{
+                width: 102px;
+                height: 100px;
+                top: 28px;
+                left: 20px;
+            }
+            @include Desktop-l{
+                width: 92px;
+                height: 90px;
+            }
+            @include Desktop-m{
+                width: 92px;
+                height: 90px;
+            }
+            @include Desktop-s{
+                width: 88px;
+                height: 86px;
+                left: 10px;
+            }
+            @include Desktop-l{
+                width: 88px;
+                height: 86px;
+            }
+            @include Tablet-m{
+                width: 70px;
+                height: 70px;
+                left: 10px;
+                top: 5px;
+            }
         }
     }
     .header__bottom{
@@ -50,9 +123,20 @@
         justify-content: flex-end;
         align-items: center;
         height: 76px;
-        background-color: rgba(0,0,0,0.0);
+        background-color: $color-transparente;
 
         grid-area: bottom;
+
+        @include Tablet-m{
+            background-color: var(--color-secundario);
+            height: 80px;
+            justify-content: space-around;
+        }
+        @include Tablet-s{
+            background-color: var(--color-secundario);
+            height: 240px;
+            justify-content: space-around;
+        }
 
         .nav__list{
             display: flex;
@@ -61,6 +145,21 @@
             margin-bottom: 0;
             padding: 5px;
             list-style-type: none;
+
+            @include Desktop-m{
+                gap: 5px;
+            }
+            @include Tablet-l{
+                gap: 4px;
+            }
+            @include Tablet-m{
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            @include Tablet-s{
+                flex-direction: column;
+                align-items: center;
+            }
 
             .list{
                 .list__link{
@@ -73,6 +172,21 @@
                     font-size: 1em;
                     margin: 5px 16px;
                     padding: 5px;
+                    
+                    @include Desktop-m{
+                        margin: 5px 10px;
+                    }
+                    @include Desktop-s{
+                        margin: 5px 5px; 
+                    }
+                    @include Tablet-l{
+                        margin: 5px 2px; 
+                        font-size: 14px;
+                    }
+                    @include Tablet-m{
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
     
                     &::after{  
                         content: '';
@@ -98,4 +212,8 @@
 
 .banner{
     margin-top: -70px;
+    
+    @include Tablet-m{
+        margin-top: 0px;
+    }
 }

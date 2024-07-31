@@ -1,0 +1,63 @@
+.contact--page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+
+    .container__contact{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        @include Tablet-l{
+            flex-direction: column;
+        }
+
+        .contact__hour,.contact__location{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items:start;
+            
+            padding: 40px;
+            width: 50%;
+
+            @include Tablet-l{
+                width: 100%;
+            }
+        }
+
+        .contact__hour{
+            color: $color-texto;
+            background-color: $color-primario;
+
+            .hour__title{
+                height: 80px;
+            }
+            .hour__description{
+                height: 100px;
+            }
+            
+        }
+        .contact__location{
+            color: var(--color-secundario);
+            background-color: $color-sombra;
+
+            .location__title{
+                height: 80px;
+            }
+            .location__description{
+                height: 100px;
+            }
+        }
+    
+    }
+    
+}

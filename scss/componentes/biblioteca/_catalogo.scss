@@ -1,0 +1,86 @@
+.content__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    height: 280px;
+    margin-top: 30px;
+    padding: 20px;
+
+    @include Tablet-s{
+        height: 380px;
+    }
+
+    .header__span{
+        font-size: 20px;
+        color: $color-primario;
+        font-weight: 500;
+    }
+    .header__title{
+        font-size: 60px;
+    }
+    .header__text{
+        font-size: 30px;
+    }
+    
+}
+
+.container__book{
+    @extend %flexCenter-column;
+    
+    margin: 40px auto;
+
+    @include Mobile{
+        margin: 0 12px;
+    }
+    
+    .book__article{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 
+        repeat(auto-fill, minmax(150px, 1fr));
+        /* repeat(2,1fr); */
+        justify-items: start    ;
+        grid-template-areas: 
+            "portada" 
+            "description";
+    
+        width: (40% * 2);
+
+        @include Mobile{
+            width: 100%;
+        }
+        
+
+        .article__portadaLibro{
+            grid-area: portada;
+        }
+        .article__description{
+            grid-area: description;
+
+            .description__header{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: start;
+                align-items: center;
+                gap: 5px;
+                margin-top: 10px;
+
+                .header__fecha{
+                    max-width: 150px;
+                    padding: 4px;
+                    color: $color-fecha;
+                    font-size: 14px;
+                }
+                .header__tag{
+                    padding: 4px;
+                    color: $color-texto;
+                    font-size: 14px;
+                    background-color: $color-primario;
+                }
+            }
+        }
+    }
+}

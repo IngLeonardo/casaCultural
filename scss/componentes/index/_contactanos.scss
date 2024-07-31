@@ -21,8 +21,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: var(--color-base);
-        background-color: var(--color-primario);
+        color: $color-texto;
+        background-color: $color-primario;
         
         grid-area: horario;
 
@@ -47,7 +47,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: var(--color-sombra);
+        background-color: $color-sombra;
         
         grid-area: contacto;
         

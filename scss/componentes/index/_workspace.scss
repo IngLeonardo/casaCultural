@@ -1,5 +1,4 @@
 .workpaces{
-
     .workpaces__encabezado{
         width: 100%;
         height: 300px;
@@ -39,7 +38,7 @@
         "workspace1 workspace3 workspace4"
         "workspace5 workspace5 workspace7";
         gap: 4px;
-        background-color: #ffffff;
+        background-color: $color-texto;
         padding: 0 150px;
         
         @include Desktop-m{
@@ -88,28 +87,58 @@
         img{
             width: 100%;
             height: 280px;
+            object-fit: cover; 
+        }
+        .capa{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+
+            &:hover{
+                background: rgba(0, 0, 0, 0.0 );
+                
+            }
         }
 
         .gallery__workspace1{
             grid-area: workspace1;
+            overflow: hidden;
+            position: relative;
         }
         .gallery__workspace2{
             grid-area: workspace2;
+            overflow: hidden;
+            position: relative;
         }
         .gallery__workspace3{
             grid-area: workspace3;
+            overflow: hidden;
+            position: relative;
         }
         .gallery__workspace4{
             grid-area: workspace4;
+            overflow: hidden;
+            position: relative;
         }
         .gallery__workspace5{
             grid-area: workspace5;
+            overflow: hidden;
+            position: relative;
         }
         .gallery__workspace6{
             grid-area: workspace6;
+            overflow: hidden;
+            position: relative;
         }
         .gallery__workspace7{
             grid-area: workspace7;
+            overflow: hidden;
+            position: relative;
             
             @include Tablet-s{
                 display: none;

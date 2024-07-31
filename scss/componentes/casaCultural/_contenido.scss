@@ -1,0 +1,33 @@
+.container_history{
+    .history__header{
+        @extend %flexStart-column;
+    
+        height: 280px;
+        margin-top: 30px;
+        padding: 20px;
+
+        .header__span{
+            font-size: 20px;
+            color: $color-primario;
+            font-weight: 500;
+        }
+        .header__title{
+            font-size: 60px;
+        }
+        .header__text{
+            font-size: 30px;
+        }
+        
+    }
+    .history__body{
+        width: 80%;
+        margin: 0px auto;
+
+        .body__text{
+            text-align: left;
+            line-height: 25px;
+            padding: 10px;
+            
+        }
+    }
+}

@@ -1,22 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
-$color-transparente: rgba(0,0,0,0.0);
-$color-fecha: #a4a4a4;
-$color-base: #ffffff;
 $color-primario: #7b3132ff;
 $color-secundario: #000000;
+$color-texto: #ffffff;
+$color-base: #171717;
+$color-fecha: #a4a4a4;
 $color-sombra: #ececec;
+$color-transparente: rgba(0,0,0,0.0);
 
-:root{
-    --color-primario: #7b3132ff;
-    --color-secundario: #000000;
-    --color-base: #ffffff;
-    --color-desenfoque: #a4a4a4;
-    --color-sombra: #ececec;
-    
-}
+
 *{
     margin: 0;
     padding: 0;
@@ -25,4 +18,26 @@ $color-sombra: #ececec;
 }
 body{
     font-family: "Montserrat", sans-serif !important;
+}
+
+
+%flexCenter-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexCenter-column{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexStart-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }

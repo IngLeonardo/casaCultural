@@ -7,10 +7,7 @@
     margin: 30px 0;
 
     .agendaCultura__header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @extend %flexCenter-column;
         margin: 20px;
 
         .header__parrafo{
@@ -24,12 +21,16 @@
     }
 
     .contendor_articulo{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @extend %flexCenter-column;
         gap:15px;
-        width: 80%;
+        width: 70%;
+
+        @include Tablet-l{
+            width: 90%;
+        }
+        @include Tablet-s{
+            width: 100%;
+        }
 
         .articulo{
             display: grid;
@@ -42,18 +43,31 @@
             background-color: $color-sombra;
             padding: 10px;
 
+            @include Tablet-s{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 20% 30% 60%;
+                grid-template-areas: 
+                "boxHeader boxHeader"
+                "boxNoticia boxNoticia"
+                "boxNoticia boxNoticia";
+
+                height: auto;
+            }
+
             .noticia__contenedorHeader{
                 grid-area: boxHeader;
                 
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
                 justify-content: end;
+                align-items: center;
                 gap: 10px;
                 text-align: center;
                 margin: 0 20px;
-                height: 40px;
-                line-height: 40px;
+
+                @include Mobile{
+                    margin: 0 5px;
+                }
 
                 .contenedorHeader__fecha{
                     font-size: 14px;
@@ -63,7 +77,7 @@
 
                 .contenedorHeader__clasificacion,
                 .contenedorHeader__categoria{
-                    color: $color-base;
+                    color: $color-texto;
                     background-color: $color-primario;
                     padding: 5px;
                     width: 80px;
@@ -73,24 +87,45 @@
             .articulo__contenedorImg{
                 grid-area: boxImg;
 
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
+                @extend %flexCenter-row;
+
+                .articulo__img{
+                    @include Desktop-xxl{
+                        width: 300px;
+                        height: 300px;
+                    }
+                    @include Desktop-m{
+                        width: 250px;
+                        height: 250px;
+                    }
+                    @include Tablet-s{
+                        display: none;
+                    }
+                }
 
             }
             .noticia__contenedorBody{
                 grid-area: boxNoticia;
 
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                @extend %flexCenter-column;
 
                 .contenedorBody__titulo,
                 .contenedorBody__contenido{
                     padding: 6px;
                     text-align:start;
+                    
+                }
+                .contenedorBody__titulo{
+                    @include Tablet-s{
+                        font-size: 20px;
+                        margin-bottom: 2px;
+                    }
+                }
+                .contenedorBody__contenido p{
+                    margin-bottom: 10px;
+                }
+                .contenedorBody__contenido a button{
+                    margin-bottom: 15px;
                 }
                 
             }

@@ -123,11 +123,8 @@ footer {
     footer .container__top .button {
       position: fixed;
       bottom: 90px;
-      right: 40px; }
-      @media (max-width: 1200px) {
-        footer .container__top .button {
-          bottom: 130px;
-          right: 18px; } }
+      right: 40px;
+      cursor: pointer; }
       footer .container__top .button a .bi-arrow-up-circle-fill {
         font-size: 60px;
         color: #7b3132ff; }
@@ -158,48 +155,36 @@ footer {
     transform: rotateY(360deg); } }
   footer .button__capa2 {
     position: fixed;
-    top: 680px;
-    right: 20px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
+    bottom: 200px;
+    right: 25px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
     border-radius: 50%;
     background-color: rgba(74, 202, 89, 0.369); }
-    @media (max-width: 1200px) {
-      footer .button__capa2 {
-        top: 540px;
-        right: 12px; } }
     footer .button__capa2 .button__capa1 {
       position: fixed;
-      top: 690px;
-      right: 30px;
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
+      bottom: 207px;
+      right: 33px;
+      width: 65px;
+      height: 65px;
+      line-height: 65px;
       background-color: rgba(74, 202, 89, 0.672);
       border-radius: 50%; }
-      @media (max-width: 1200px) {
-        footer .button__capa2 .button__capa1 {
-          top: 550px;
-          right: 22px; } }
       footer .button__capa2 .button__capa1 .button__whatsapp {
         position: fixed;
-        top: 700px;
+        bottom: 215px;
         right: 40px;
         background-color: #4aca59ff;
         font-size: 30px;
         color: #ffffff;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
         border-radius: 50%; }
         footer .button__capa2 .button__capa1 .button__whatsapp .bi-whatsapp {
           color: #ffffff;
           text-decoration: none; }
-        @media (max-width: 1200px) {
-          footer .button__capa2 .button__capa1 .button__whatsapp {
-            top: 560px;
-            right: 30px; } }
   footer .container__bottom span {
     width: 100%;
     padding: 20px;

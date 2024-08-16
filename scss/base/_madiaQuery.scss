@@ -1,4 +1,10 @@
-    @mixin Desktop-xxl{
+@mixin fullScreen{
+    @media(max-width: 2000px){
+        @content;
+    }
+}
+
+@mixin Desktop-xxl{
     @media(max-width: 1200px){
         @content;
     }

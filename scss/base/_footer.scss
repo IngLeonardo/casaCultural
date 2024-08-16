@@ -9,11 +9,9 @@ footer{
             position: fixed;
             bottom: 90px;
             right: 40px;
+            cursor: pointer;
 
-            @include Desktop-xxl{
-                bottom: 130px;
-                right: 18px;   
-            }
+            
             a{
                 .bi-arrow-up-circle-fill{
                     font-size: 60px;
@@ -58,52 +56,42 @@ footer{
     }
     .button__capa2{
             position: fixed;
-            top: 680px;
-            right: 20px;
-            width: 100px;
-            height: 100px;
-            line-height: 100px;
-            border-radius: 50%;
-            background-color: $color-capa2;
-
-            @include Desktop-xxl{
-                top: 540px;
-                right: 12px;   
-            }
-        .button__capa1{
-            position: fixed;
-            top: 690px;
-            right: 30px;
+            bottom: 200px;
+            right: 25px;
             width: 80px;
             height: 80px;
             line-height: 80px;
+            border-radius: 50%;
+            background-color: $color-capa2;
+
+            
+        .button__capa1{
+            position: fixed;
+            bottom: 207px;
+            right: 33px;
+            width: 65px;
+            height: 65px;
+            line-height: 65px;
             background-color: $color-capa1;
             border-radius: 50%;
 
-            @include Desktop-xxl{
-                top: 550px;
-                right: 22px;   
-            }
+            
             .button__whatsapp{
                 position: fixed;
-                top: 700px;
+                bottom: 215px;
                 right: 40px;
                 background-color: $color-whatsapp;
                 font-size: 30px;
                 color: $color-texto;
-                width: 60px;
-                height: 60px;
-                line-height: 60px;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
                 border-radius: 50%;
                 .bi-whatsapp{
                     color: $color-texto;
                     text-decoration: none;
                 }
 
-                @include Desktop-xxl{
-                    top: 560px;
-                    right: 30px;   
-                }
             }
         }
     }

@@ -13,7 +13,7 @@
     <meta property="og:locale" content="es_COL"> 
     <link rel="icon" href="../img/identidadSitio/favicon.png" type="image/png">
         <!-- Integración del Favicon -->
-        <link rel="icon" href="../img/identidadSitio/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="./img/identidadSitio/favicon.svg" type="image/x-icon">
         <!-- Estilos propios -->
         <link rel="stylesheet" href="../css/main.css">
         <!-- Estilos de bootstrap -->
@@ -24,21 +24,35 @@
     <title>Ubicación</title>
 </head>
 <body>
-    <header class="container__header">
-        <div class="header__top">
-            <h1 class="title">Casa de la cultura Jorge Eliécer Gaitán</h1>
-            <a href="../index.html">
-                <img class="img" src="../img/identidadSitio/logo.png" alt="logo de la página">
-            </a>
-        </div>
-        <nav class="header__bottom_pages">
-            <ul class="nav__list">
-                <li class="list"><a class="list__link" href="../index.html">Inicio</a></li>
-                <li class="list"><a class="list__link" href="./casaCultura.html">Casa de la cultura</a></li>
-                <li class="list"><a class="list__link" href="./agendaCultural.html">Agenda cultural</a></li>
-                <li class="list"><a class="list__link" href="./biblioteca.html">Biblioteca</a></li>
-                <li class="list"><a class="list__link" href="./ubicacion.html">Ubicación</a></li>
-            </ul>
+    <header class="container__header--pages">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">
+                    <img src="../img/identidadSitio/logoSmall.svg" alt="">
+                </a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-light active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./casaCultura.html">Casa de la cultura</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./agendaCultural.html">Agenda cultural</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./biblioteca.html">Biblioteca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./ubicacion.html">Ubicación</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     </header>
@@ -62,7 +76,7 @@
     </main>
     <footer>
         <div class="footer__top">
-            <img class="top__img" src="../img/identidadSitio/logo_transparente.png" alt="logo empresarial">
+            <img class="top__img" src="../img/identidadSitio/logoSmall-red.svg" alt="logo empresarial"/>
         </div>
         <div class="container__bottom">
             <span>Copyright © 2024 - developed by Leonardo Silva</span>
@@ -70,6 +84,9 @@
     </footer>
 
     <!-- Scripts de bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

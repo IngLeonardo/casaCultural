@@ -3,10 +3,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-
     height: 280px;
-    margin-top: 30px;
     padding: 20px;
+    margin-top: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    @include Desktop-s{
+        margin-top: 160px;
+    }
 
     @include Tablet-s{
         height: 380px;
@@ -28,12 +33,12 @@
 
 .container__book{
     @extend %flexCenter-column;
-    
     margin: 40px auto;
 
     @include Mobile{
-        margin: 0 12px;
-    }
+        margin: 50px 12px;
+    }   
+    
     
     .book__article{
         display: grid;
@@ -47,9 +52,11 @@
             "description";
     
         width: (40% * 2);
+        
 
         @include Mobile{
             width: 100%;
+            margin-top: 50px;
         }
         
 
@@ -58,6 +65,7 @@
         }
         .article__description{
             grid-area: description;
+            margin-bottom: 50px;
 
             .description__header{
                 display: flex;
@@ -80,6 +88,9 @@
                     font-size: 14px;
                     background-color: $color-primario;
                 }
+            }
+            .description__body{
+                margin-top: 50px;
             }
         }
     }

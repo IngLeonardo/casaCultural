@@ -25,9 +25,9 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items:start;
-            
             padding: 40px;
             width: 50%;
+            margin-top: 116px;
 
             @include Tablet-l{
                 width: 100%;
@@ -36,13 +36,14 @@
 
         .contact__hour{
             color: $color-texto;
-            background-color: $color-primario;
+            background-color: $color-secundario;
 
             .hour__title{
                 height: 80px;
             }
             .hour__description{
                 height: 100px;
+                
             }
             
         }

@@ -1,6 +1,23 @@
 footer{
     text-align: center;
-    
+
+    .container__top{
+        @extend %flexCenter-row;
+        position:relative;
+
+        .button{
+            position: fixed;
+            bottom: 180px;
+            left: 50px;
+            a{
+                .bi-arrow-up-circle-fill{
+                    font-size: 60px;
+                    color: $color-primario;   
+                    
+                }
+            }
+        }
+    }
 
     .footer__top{
         width: 100%;
@@ -30,6 +47,44 @@ footer{
             }
         }
     }
+    .button__capa2{
+            position: fixed;
+            top: 680px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            background-color: $color-capa2;
+        .button__capa1{
+            position: fixed;
+            top: 690px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            background-color: $color-capa1;
+            border-radius: 50%;
+            .button__whatsapp{
+                position: fixed;
+                top: 700px;
+                right: 40px;
+                background-color: $color-whatsapp;
+                font-size: 30px;
+                color: $color-texto;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 50%;
+                .bi-whatsapp{
+                    color: $color-texto;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+
     .container__bottom span{
         width: 100%;
         padding: 20px;

@@ -1,10 +1,18 @@
 .container_history{
     .history__header{
         @extend %flexStart-column;
-    
         height: 280px;
-        margin-top: 30px;
         padding: 20px;
+        margin-top: 120px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        @include Tablet-l{
+            margin-top: 150px;
+        }
+        @include Mobile{
+            margin-top: 170px;
+        }
 
         .header__span{
             font-size: 20px;
@@ -28,6 +36,11 @@
             line-height: 25px;
             padding: 10px;
             
+            &:first-child{
+                @include Tablet-s{
+                    margin-top: 40px;
+                }
+            }
         }
     }
 }

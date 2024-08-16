@@ -9,6 +9,11 @@ footer{
             position: fixed;
             bottom: 90px;
             right: 40px;
+
+            @include Desktop-xxl{
+                bottom: 130px;
+                right: 18px;   
+            }
             a{
                 .bi-arrow-up-circle-fill{
                     font-size: 60px;
@@ -32,6 +37,11 @@ footer{
             margin: 0 auto;
             vertical-align: middle;
             animation: rotate-vertical-center 8s;
+
+            @include Desktop-xxl{
+                width: 170px;
+                height: 220px;
+            }
         }
 
         @keyframes rotate-vertical-center{
@@ -55,6 +65,11 @@ footer{
             line-height: 100px;
             border-radius: 50%;
             background-color: $color-capa2;
+
+            @include Desktop-xxl{
+                top: 540px;
+                right: 12px;   
+            }
         .button__capa1{
             position: fixed;
             top: 690px;
@@ -64,6 +79,11 @@ footer{
             line-height: 80px;
             background-color: $color-capa1;
             border-radius: 50%;
+
+            @include Desktop-xxl{
+                top: 550px;
+                right: 22px;   
+            }
             .button__whatsapp{
                 position: fixed;
                 top: 700px;
@@ -78,6 +98,11 @@ footer{
                 .bi-whatsapp{
                     color: $color-texto;
                     text-decoration: none;
+                }
+
+                @include Desktop-xxl{
+                    top: 560px;
+                    right: 30px;   
                 }
             }
         }

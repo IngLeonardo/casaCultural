@@ -124,6 +124,10 @@ footer {
       position: fixed;
       bottom: 90px;
       right: 40px; }
+      @media (max-width: 1200px) {
+        footer .container__top .button {
+          bottom: 130px;
+          right: 18px; } }
       footer .container__top .button a .bi-arrow-up-circle-fill {
         font-size: 60px;
         color: #7b3132ff; }
@@ -140,6 +144,10 @@ footer {
       margin: 0 auto;
       vertical-align: middle;
       animation: rotate-vertical-center 8s; }
+      @media (max-width: 1200px) {
+        footer .footer__top .top__img {
+          width: 170px;
+          height: 220px; } }
 
 @keyframes rotate-vertical-center {
   0% {
@@ -157,6 +165,10 @@ footer {
     line-height: 100px;
     border-radius: 50%;
     background-color: rgba(74, 202, 89, 0.369); }
+    @media (max-width: 1200px) {
+      footer .button__capa2 {
+        top: 540px;
+        right: 12px; } }
     footer .button__capa2 .button__capa1 {
       position: fixed;
       top: 690px;
@@ -166,6 +178,10 @@ footer {
       line-height: 80px;
       background-color: rgba(74, 202, 89, 0.672);
       border-radius: 50%; }
+      @media (max-width: 1200px) {
+        footer .button__capa2 .button__capa1 {
+          top: 550px;
+          right: 22px; } }
       footer .button__capa2 .button__capa1 .button__whatsapp {
         position: fixed;
         top: 700px;
@@ -180,6 +196,10 @@ footer {
         footer .button__capa2 .button__capa1 .button__whatsapp .bi-whatsapp {
           color: #ffffff;
           text-decoration: none; }
+        @media (max-width: 1200px) {
+          footer .button__capa2 .button__capa1 .button__whatsapp {
+            top: 560px;
+            right: 30px; } }
   footer .container__bottom span {
     width: 100%;
     padding: 20px;

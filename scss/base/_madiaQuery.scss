@@ -1,4 +1,4 @@
-@mixin Desktop-xxl{
+    @mixin Desktop-xxl{
     @media(max-width: 1200px){
         @content;
     }

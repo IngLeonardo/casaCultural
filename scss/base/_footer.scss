@@ -7,13 +7,12 @@ footer{
 
         .button{
             position: fixed;
-            bottom: 180px;
-            left: 50px;
+            bottom: 90px;
+            right: 40px;
             a{
                 .bi-arrow-up-circle-fill{
                     font-size: 60px;
-                    color: $color-primario;   
-                    
+                    color: $color-primario; 
                 }
             }
         }

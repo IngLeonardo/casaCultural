@@ -122,8 +122,8 @@ footer {
     position: relative; }
     footer .container__top .button {
       position: fixed;
-      bottom: 180px;
-      left: 50px; }
+      bottom: 90px;
+      right: 40px; }
       footer .container__top .button a .bi-arrow-up-circle-fill {
         font-size: 60px;
         color: #7b3132ff; }
